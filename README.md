@@ -1,4 +1,6 @@
 # AI-Compute-Stress-Validation
+_PERSONAL PROJECT_
+
 A hardware-aware AI inference benchmarking project focused on compute stress validation, quantized CNN performance, memory bandwidth behavior, and performance-per-watt tradeoff analysis across CPU and GPU architectures.
 
 
