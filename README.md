@@ -1,59 +1,38 @@
 # AI-Compute-Stress-Validation
-_PERSONAL PROJECT_
+> Stress-testing AI inference across CPU and GPU paths—quantization tradeoffs, memory bandwidth limits, and performance-per-watt.
 
-A hardware-aware AI inference benchmarking project focused on compute stress validation, quantized CNN performance, memory bandwidth behavior, and performance-per-watt tradeoff analysis across CPU and GPU architectures.
+A hardware-aware AI inference benchmarking project evaluating quantized CNN models across CPU and GPU architectures to study compute bottlenecks, memory bandwidth behavior, corner-case stress, and performance-per-watt tradeoffs.
 
+## What This Project Does
 
-## Overview
-This project focuses on heterogeneous AI compute stress validation and corner-case profiling through a hardware-aware inference pipeline. The work is centered on benchmarking quantized CNN models across CPU and GPU architectures while studying compute bottlenecks, memory behavior, and efficiency tradeoffs.
+Running neural networks efficiently on real hardware depends on more than model accuracy—precision formats, memory traffic, and power draw can quickly become bottlenecks. This project profiles how inference workloads behave under stress across different compute targets.
 
-The goal is to better understand how different hardware paths behave under AI inference workloads, especially when balancing speed, precision, resource utilization, and performance-per-watt.
+Specifically, it focuses on:
+1. **Precision & Quantization Impact:** Comparing **FP32**, **FP16**, and **INT8** CNN inference behavior across CPU and GPU paths.
+2. **Bottleneck & Corner-Case Profiling:** Catching compute saturation, memory bandwidth limits, and edge-case slowdowns under parallel execution.
+3. **Efficiency Tradeoffs:** Quantifying latency, throughput, and resource utilization against **performance-per-watt**.
 
-## Objective
-The purpose of this project was to:
-- benchmark AI inference performance across CPU and GPU architectures
-- evaluate FP32, FP16, and INT8 quantized CNN models
-- identify compute bottlenecks and corner-case behavior
-- analyze memory bandwidth utilization under parallel execution
-- quantify performance-per-watt tradeoffs across architectures
+## What I'm Focusing On
 
-## Focus Areas
-- AI inference benchmarking
-- heterogeneous compute analysis
-- quantization impact on performance
-- memory bandwidth behavior
-- parallel execution efficiency
-- hardware-aware workload profiling
+- **CPU vs. GPU Benchmarking:** Measuring latency, throughput, and hardware utilization across heterogeneous compute targets.
+- **Quantization Behavior (FP32 / FP16 / INT8):** Evaluating speedups and resource tradeoffs as numerical precision scales down.
+- **Memory Bandwidth & Parallelism:** Analyzing how memory traffic and parallel execution affect throughput under heavy load.
+- **Corner-Case Stress Validation:** Probing edge cases and bottlenecks rather than happy-path averages alone.
+- **Performance-per-Watt Analysis:** Weighing raw speed against power and efficiency costs across architectures.
 
-## Tools and Skills Used
-- Python
-- C/C++
-- data analysis
-- benchmarking workflows
-- performance validation
-- technical documentation
+## How the Workflow Is Set Up
 
-## Project Workflow
-1. Define inference workloads across multiple precision formats.
-2. Benchmark execution on different compute architectures.
-3. Measure latency, throughput, and resource utilization.
-4. Profile memory and execution bottlenecks.
-5. Compare efficiency and performance-per-watt tradeoffs.
+- **Workload Definition:** Configuring CNN inference workloads across FP32, FP16, and INT8 precision formats.
+- **Cross-Architecture Execution:** Running benchmarks in Python and C/C++ across CPU and GPU targets.
+- **Telemetry & Profiling:** Recording latency, throughput, resource usage, and memory/execution bottlenecks.
+- **Tradeoff Comparison:** Summarizing efficiency and performance-per-watt results in structured logs and analysis notes.
 
-## Repository Contents
-- benchmarking scripts
-- profiling notes
-- workload configurations
-- performance logs
-- analysis summaries
-- technical writeups
+## Planned Folder Layout
 
-## Future Improvements
-- expand hardware coverage to additional accelerator types
-- automate reporting and visualization
-- compare more model families beyond CNNs
-- integrate corner-case regression testing for repeatability
-
-## Author
-Franceli Gonzalez
-Texas State University | Personal Project
+```text
+AI-Compute-Stress-Validation/
+├── scripts/      # Benchmarking and profiling scripts (Python / C++)
+├── configs/      # Workload and precision configurations
+├── logs/         # Raw latency, throughput, and telemetry outputs
+├── notes/        # Profiling notes, bottleneck findings, and writeups
+└── results/      # Summary tables and performance-per-watt comparisons
