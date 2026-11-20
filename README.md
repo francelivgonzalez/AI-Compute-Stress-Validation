@@ -1,5 +1,5 @@
 # AI-Compute-Stress-Validation
-> Stress-testing AI inference across CPU and GPU paths—quantization tradeoffs, memory bandwidth limits, and performance-per-watt.
+> Stress-testing AI inference across CPU and GPU paths- tradeoffs, memory bandwidth limits, and performance-per-watt.
 
 A hardware-aware AI inference benchmarking project evaluating quantized CNN models across CPU and GPU architectures to study compute bottlenecks, memory bandwidth behavior, corner-case stress, and performance-per-watt tradeoffs.
 
